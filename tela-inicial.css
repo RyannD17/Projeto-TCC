@@ -11,3 +11,151 @@ body {
     background-color: #f8fafc;
     color: #1e293b;
 }
+
+a {
+    text-decoration: none;
+    color: inherit; /* O link herda a cor do texto em vez de ficar azul */
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* Se a tela for pequena, a tela desce para ajustar */
+    justify-content: space-between; /* Logo na esquerda, menu na direita */
+    align-items: center;
+    gap: 15px;
+    background-color: #d9d9d9;
+    padding: 15px 40px;
+}
+
+.navbar-logo {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.navbar-topicos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar-topicos a {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.navbar-topicos a:hover {
+    opacity: 0.6; /* Efeito de "clarear" ao passar o mouse */
+}
+
+.navbar-topicos button {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.navbar-topicos button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A imagem preenche o círculo sem esticar */
+}
+
+.principal {
+    max-width: 1100px; /* Limite máximo de largura */
+    margin: 0 auto; /* Centraliza o bloco na tela */
+    padding: 48px 40px;
+}
+
+.principal h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.principal p {
+    font-size: 15px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 36px;
+}
+
+.cards a {
+    flex: 1 1 200px; /* Cresce para dividir o espaço, mas nunca passa de 200px */
+    display: flex;
+    flex-direction: column; /* Imagem por cima, texto embaixo */
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    height: 122px;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cards a img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.cards a:hover {
+    transform: translate(-3px); /* Efeito de subir o card */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.aparte {
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    padding: 22px 40px;
+    margin-top: 48px;
+}
+
+.aparte div {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Coluna da imagem + coluna do texto */
+    column-gap: 24px;
+    align-items: center;
+}
+
+.aparte img {
+    grid-row: 1 / span 2; /* A imagem ocupa as duas partes (título e texto) */
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.aparte strong {
+    font-size: 15px;
+}
+
+.aparte p {
+    margin-top: 4px;
+    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 15px 20px;
+        justify-content: center;
+    }
+
+    .principal {
+        padding: 32px 20px;
+    }
+
+    .cards a {
+        flex: 1 1 calc(50% - 10px); /* Dois cards por linha */
+    }
+
+    .aparte {
+        padding: 18px 20px;
+    }
+}
