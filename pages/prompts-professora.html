@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conexão Redação - Prompts da Professora</title>
+    <link rel="stylesheet" href="/static/css/prompts-professora.css" />
+    <link rel="stylesheet" href="/static/css/shell.css" />
+    <script src="/static/js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar unified-sidebar">
+        <nav aria-label="Navegação principal">
+          <a href="/tela-inicial.html"><span class="material-symbols-rounded side-icon">home</span><span>Início</span></a>
+          <a href="/oficinas.html"><span class="material-symbols-rounded side-icon">school</span><span>Oficinas</span></a>
+          <a href="/turmas.html"><span class="material-symbols-rounded side-icon">groups</span><span>Turmas</span></a>
+          <a href="/orientacoes.html"><span class="material-symbols-rounded side-icon">lightbulb</span><span>Orientações</span></a>
+          <a href="/materiais.html"><span class="material-symbols-rounded side-icon">menu_book</span><span>Materiais</span></a>
+          <a href="/prompts.html"><span class="material-symbols-rounded side-icon">prompt_suggestion</span><span>Prompts</span></a>
+          <a class="active" href="/prompts-professora.html"><span class="material-symbols-rounded side-icon">edit_note</span><span>Prompts da professora</span></a>
+          <a href="/checklist.html"><span class="material-symbols-rounded side-icon">fact_check</span><span>Checklist</span></a>
+          <a href="/autoavaliacao.html"><span class="material-symbols-rounded side-icon">self_improvement</span><span>Autoavaliação</span></a>
+          <a href="/progresso.html"><span class="material-symbols-rounded side-icon">monitoring</span><span>Competências ENEM</span></a>
+          <a href="/perfil.html"><span class="material-symbols-rounded side-icon">person</span><span>Perfil</span></a>
+        </nav>
+      </aside>
+
+      <main class="prompt-main">
+        <header class="page-heading">
+          <div><span class="eyebrow">Biblioteca pedagógica</span><h1>Prompts da professora</h1><p>Crie orientações objetivas para apoiar cada etapa da escrita dos estudantes.</p></div>
+          <button class="button primary" type="button" data-open-prompt><span class="material-symbols-rounded">add</span>Novo prompt</button>
+        </header>
+
+        <section class="overview" aria-label="Resumo dos prompts">
+          <div><span class="material-symbols-rounded">library_books</span><div><strong data-prompt-total>3</strong><small>prompts na biblioteca</small></div></div>
+          <div><span class="material-symbols-rounded">groups</span><div><strong>3</strong><small>turmas atendidas</small></div></div>
+          <div><span class="material-symbols-rounded">publish</span><div><strong data-prompt-published>2</strong><small>prompts publicados</small></div></div>
+        </section>
+
+        <section class="prompt-workspace">
+          <div class="toolbar">
+            <label class="search"><span class="material-symbols-rounded">search</span><span class="sr-only">Buscar prompts</span><input id="prompt-search" type="search" placeholder="Buscar por título ou conteúdo..." /></label>
+            <div class="filters" aria-label="Filtrar por categoria">
+              <button class="selected" data-category="Todos">Todos</button>
+              <button data-category="Introdução">Introdução</button>
+              <button data-category="Argumentação">Argumentação</button>
+              <button data-category="Conclusão">Conclusão</button>
+              <button data-category="Revisão">Revisão</button>
+            </div>
+          </div>
+
+          <div class="prompt-list" id="teacher-prompt-list">
+            <article class="teacher-prompt" data-category="Argumentação">
+              <div class="prompt-icon"><span class="material-symbols-rounded">psychology</span></div>
+              <div class="prompt-copy"><div><span class="category argumentacao">Argumentação</span><span class="status">Publicado</span></div><h2>Desenvolvimento do argumento</h2><p>Explique de que maneira o argumento se relaciona com a tese e acrescente uma evidência concreta para sustentá-lo.</p><small>Atualizado há 2 dias · usado por 24 estudantes</small></div>
+              <div class="prompt-actions"><button aria-label="Editar prompt" data-edit-prompt><span class="material-symbols-rounded">edit</span></button><button aria-label="Excluir prompt" data-delete-prompt><span class="material-symbols-rounded">delete</span></button></div>
+            </article>
+            <article class="teacher-prompt" data-category="Introdução">
+              <div class="prompt-icon"><span class="material-symbols-rounded">format_quote</span></div>
+              <div class="prompt-copy"><div><span class="category introducao">Introdução</span><span class="status">Publicado</span></div><h2>Contextualização do tema</h2><p>Apresente o tema a partir de um contexto histórico ou social relevante, evitando generalizações e frases prontas.</p><small>Atualizado há 5 dias · usado por 18 estudantes</small></div>
+              <div class="prompt-actions"><button aria-label="Editar prompt" data-edit-prompt><span class="material-symbols-rounded">edit</span></button><button aria-label="Excluir prompt" data-delete-prompt><span class="material-symbols-rounded">delete</span></button></div>
+            </article>
+            <article class="teacher-prompt" data-category="Revisão">
+              <div class="prompt-icon"><span class="material-symbols-rounded">spellcheck</span></div>
+              <div class="prompt-copy"><div><span class="category revisao">Revisão</span><span class="status draft">Rascunho</span></div><h2>Clareza e coesão textual</h2><p>Revise os conectivos entre os períodos e identifique trechos que possam ser reescritos com mais objetividade.</p><small>Atualizado ontem · ainda não utilizado</small></div>
+              <div class="prompt-actions"><button aria-label="Editar prompt" data-edit-prompt><span class="material-symbols-rounded">edit</span></button><button aria-label="Excluir prompt" data-delete-prompt><span class="material-symbols-rounded">delete</span></button></div>
+            </article>
+          </div>
+          <div class="empty-state" id="prompt-empty" hidden><span class="material-symbols-rounded">search_off</span><h2>Nenhum prompt encontrado</h2><p>Tente buscar outro termo ou selecione uma categoria diferente.</p></div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="prompt-dialog" id="prompt-dialog">
+      <form method="dialog" id="prompt-form">
+        <header><div><span class="eyebrow">Biblioteca pedagógica</span><h2 id="prompt-dialog-title">Novo prompt</h2></div><button class="icon-button" value="cancel" aria-label="Fechar"><span class="material-symbols-rounded">close</span></button></header>
+        <label>Título<input id="prompt-title" required placeholder="Ex.: Construção da proposta de intervenção" /></label>
+        <label>Categoria<select id="prompt-category"><option>Introdução</option><option>Argumentação</option><option>Conclusão</option><option>Revisão</option></select></label>
+        <label>Orientação<textarea id="prompt-content" required rows="5" placeholder="Escreva uma orientação clara e acionável para o estudante."></textarea></label>
+        <footer><button class="button secondary" value="cancel">Cancelar</button><button class="button primary" id="prompt-save" value="default">Salvar prompt</button></footer>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

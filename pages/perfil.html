@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conexão Redação - Minha conta</title>
+    <link rel="stylesheet" href="/static/css/perfil.css" />
+    <link rel="stylesheet" href="/static/css/shell.css" />
+    <script src="/static/js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="profile-layout">
+      <aside class="profile-side unified-sidebar">
+        <nav aria-label="Navegação principal">
+          <a href="/tela-inicial.html"><span class="material-symbols-rounded side-icon">home</span><span>Início</span></a>
+          <a href="/oficinas.html"><span class="material-symbols-rounded side-icon">school</span><span>Oficinas</span></a>
+          <a href="/turmas.html"><span class="material-symbols-rounded side-icon">groups</span><span>Turmas</span></a>
+          <a href="/orientacoes.html"><span class="material-symbols-rounded side-icon">lightbulb</span><span>Orientações</span></a>
+          <a href="/materiais.html"><span class="material-symbols-rounded side-icon">menu_book</span><span>Materiais</span></a>
+          <a href="/prompts.html"><span class="material-symbols-rounded side-icon">prompt_suggestion</span><span>Prompts</span></a>
+          <a href="/prompts-professora.html"><span class="material-symbols-rounded side-icon">edit_note</span><span>Prompts da professora</span></a>
+          <a href="/checklist.html"><span class="material-symbols-rounded side-icon">fact_check</span><span>Checklist</span></a>
+          <a href="/autoavaliacao.html"><span class="material-symbols-rounded side-icon">self_improvement</span><span>Autoavaliação</span></a>
+          <a href="/progresso.html"><span class="material-symbols-rounded side-icon">monitoring</span><span>Competências ENEM</span></a>
+          <a class="active" href="/perfil.html"><span class="material-symbols-rounded side-icon">person</span><span>Perfil</span></a>
+        </nav>
+      </aside>
+
+      <main class="account-main">
+        <header class="account-header">
+          <div>
+            <span class="eyebrow">Minha conta</span>
+            <h1>Olá, Mariana</h1>
+            <p>Gerencie seus dados e preferências em um só lugar.</p>
+          </div>
+          <div class="profile-summary">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=160&h=160&q=80" alt="Foto de perfil de Mariana" />
+            <div><strong>Mariana Souza</strong><span>Professora de redação</span></div>
+          </div>
+        </header>
+
+        <nav class="account-tabs" role="tablist" aria-label="Seções da conta">
+          <button id="tab-perfil" role="tab" aria-selected="true" aria-controls="perfil" data-account-tab="perfil">
+            <span class="material-symbols-rounded">person</span><span>Perfil</span>
+          </button>
+          <button id="tab-notificacoes" role="tab" aria-selected="false" aria-controls="notificacoes" data-account-tab="notificacoes">
+            <span class="material-symbols-rounded">notifications</span><span>Notificações</span>
+          </button>
+          <button id="tab-configuracoes" role="tab" aria-selected="false" aria-controls="configuracoes" data-account-tab="configuracoes">
+            <span class="material-symbols-rounded">tune</span><span>Configurações</span>
+          </button>
+          <button id="tab-privacidade" role="tab" aria-selected="false" aria-controls="privacidade" data-account-tab="privacidade">
+            <span class="material-symbols-rounded">shield_lock</span><span>Privacidade</span>
+          </button>
+        </nav>
+
+        <section class="account-panel" id="perfil" role="tabpanel" aria-labelledby="tab-perfil">
+          <div class="panel-heading"><div class="section-icon"><span class="material-symbols-rounded">badge</span></div><div><h2>Dados pessoais</h2><p>Informações usadas no seu perfil e nas atividades da plataforma.</p></div></div>
+          <form class="profile-form account-form">
+            <div class="form-grid">
+              <label>Nome completo<input value="Mariana Souza" autocomplete="name" /></label>
+              <label>E-mail<input type="email" value="mariana.souza@escola.edu.br" autocomplete="email" /></label>
+              <label>Telefone<input value="(11) 99876-5432" autocomplete="tel" /></label>
+              <label>Função<select><option>Professora</option><option>Estudante</option><option>Coordenação</option></select></label>
+            </div>
+            <label>Instituição<input value="Escola Estadual Machado de Assis" /></label>
+            <div class="form-actions"><span>Última atualização em 12 de junho</span><button class="button primary" type="submit">Salvar dados</button></div>
+          </form>
+        </section>
+
+        <section class="account-panel" id="notificacoes" role="tabpanel" aria-labelledby="tab-notificacoes" hidden>
+          <div class="panel-heading"><div class="section-icon"><span class="material-symbols-rounded">notifications_active</span></div><div><h2>Notificações</h2><p>Escolha quais atualizações acadêmicas você deseja receber.</p></div></div>
+          <form class="profile-form settings-form">
+            <div class="settings-card"><h3>Atividades acadêmicas</h3>
+              <label class="preference-row"><input type="checkbox" checked /><span class="toggle" aria-hidden="true"></span><span><strong>Correção da redação</strong><small>Avise quando uma nova avaliação estiver disponível.</small></span></label>
+              <label class="preference-row"><input type="checkbox" checked /><span class="toggle" aria-hidden="true"></span><span><strong>Novos materiais</strong><small>Receba avisos sobre conteúdos adicionados pela professora.</small></span></label>
+              <label class="preference-row"><input type="checkbox" /><span class="toggle" aria-hidden="true"></span><span><strong>Lembretes de revisão</strong><small>Lembretes para revisar textos e concluir checklists.</small></span></label>
+            </div>
+            <div class="settings-card"><h3>Canais de comunicação</h3>
+              <label class="preference-row"><input type="checkbox" checked /><span class="toggle" aria-hidden="true"></span><span><strong>Notificações por e-mail</strong><small>Enviar um resumo semanal para seu e-mail cadastrado.</small></span></label>
+              <label class="preference-row"><input type="checkbox" checked /><span class="toggle" aria-hidden="true"></span><span><strong>Notificações no aplicativo</strong><small>Mostrar alertas enquanto você estiver usando a plataforma.</small></span></label>
+            </div>
+            <div class="form-actions"><span>Você pode alterar essas escolhas quando quiser.</span><button class="button primary" type="submit">Salvar preferências</button></div>
+          </form>
+        </section>
+
+        <section class="account-panel" id="configuracoes" role="tabpanel" aria-labelledby="tab-configuracoes" hidden>
+          <div class="panel-heading"><div class="section-icon"><span class="material-symbols-rounded">tune</span></div><div><h2>Configurações</h2><p>Personalize a experiência de uso da plataforma.</p></div></div>
+          <form class="profile-form account-form">
+            <div class="form-grid">
+              <label>Idioma<select><option>Português (Brasil)</option><option>English</option><option>Español</option></select></label>
+              <label>Aparência<select><option>Claro</option><option>Escuro</option><option>Usar padrão do sistema</option></select></label>
+              <label>Tamanho do texto<select><option>Médio</option><option>Pequeno</option><option>Grande</option></select></label>
+              <label>Página inicial<select><option>Visão geral</option><option>Minhas turmas</option><option>Oficinas</option></select></label>
+            </div>
+            <div class="form-actions"><span>As alterações valem para este dispositivo.</span><button class="button primary" type="submit">Salvar configurações</button></div>
+          </form>
+        </section>
+
+        <section class="account-panel" id="privacidade" role="tabpanel" aria-labelledby="tab-privacidade" hidden>
+          <div class="panel-heading"><div class="section-icon"><span class="material-symbols-rounded">shield_lock</span></div><div><h2>Privacidade e segurança</h2><p>Gerencie sua senha, sessões e o uso dos seus dados.</p></div></div>
+          <form class="profile-form settings-form">
+            <div class="settings-card"><h3>Alterar senha</h3><div class="form-grid">
+              <label>Senha atual<input type="password" placeholder="Digite sua senha atual" /></label>
+              <label>Nova senha<input type="password" placeholder="Mínimo de 8 caracteres" /></label>
+              <label>Confirmar nova senha<input type="password" placeholder="Digite novamente" /></label>
+            </div></div>
+            <div class="settings-card"><h3>Preferências de dados</h3>
+              <label class="preference-row"><input type="checkbox" checked /><span class="toggle" aria-hidden="true"></span><span><strong>Personalização da experiência</strong><small>Usar seu histórico para recomendar conteúdos e atividades.</small></span></label>
+              <label class="preference-row"><input type="checkbox" checked /><span class="toggle" aria-hidden="true"></span><span><strong>Compartilhar progresso</strong><small>Permitir acesso às avaliações e ao progresso nas competências.</small></span></label>
+            </div>
+            <div class="session-card"><div><span class="material-symbols-rounded">devices</span><div><strong>Este navegador</strong><small>São Paulo, Brasil · ativo agora</small></div></div><button class="button secondary" type="button" data-notify="Outras sessões encerradas.">Encerrar outras sessões</button></div>
+            <div class="form-actions"><span>Seus dados são protegidos pela nossa política de privacidade.</span><button class="button primary" type="submit">Salvar segurança</button></div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

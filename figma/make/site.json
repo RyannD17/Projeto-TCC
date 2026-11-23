@@ -1,0 +1,10 @@
+{
+  "description": "Provides functional features and tools tailored to the user’s needs, helping them complete tasks more easily.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

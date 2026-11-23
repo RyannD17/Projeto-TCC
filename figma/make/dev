@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Vite serves the standalone HTML pages for Make's supervised preview.
+ln -sfn login.html pages/index.html
+ln -sfn ../public pages/static
+exec pnpm run dev
