@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conexão Redação - Configurações</title>
+    <link rel="stylesheet" href="/static/css/configuracoes.css" />
+    <link rel="stylesheet" href="/static/css/shell.css" />
+    <script src="/static/js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="profile-layout">
+      <aside class="profile-side unified-sidebar">
+        <nav>
+          <a href="/tela-inicial.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">home</span>
+            <span>Início</span>
+          </a>
+          <a href="/oficinas.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">school</span>
+            <span>Oficinas</span>
+          </a>
+          <a href="/turmas.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">groups</span>
+            <span>Turmas</span>
+          </a>
+          <a href="/orientacoes.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">lightbulb</span>
+            <span>Orientações</span>
+          </a>
+          <a href="/materiais.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">menu_book</span>
+            <span>Materiais</span>
+          </a>
+          <a href="/prompts.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true"
+              >prompt_suggestion</span
+            >
+            <span>Prompts</span>
+          </a>
+          <a href="/prompts-professora.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">edit_note</span>
+            <span>Prompts da professora</span>
+          </a>
+          <a href="/checklist.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">fact_check</span>
+            <span>Checklist</span>
+          </a>
+          <a href="/autoavaliacao.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true"
+              >self_improvement</span
+            >
+            <span>Autoavaliação</span>
+          </a>
+          <a href="/progresso.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">monitoring</span>
+            <span>Competências ENEM</span>
+          </a>
+          <a href="/perfil.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">person</span>
+            <span>Perfil</span>
+          </a>
+          <a href="/notificacoes.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">notifications</span>
+            <span>Notificações</span>
+          </a>
+          <a href="/privacidade.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">lock</span>
+            <span>Privacidade</span>
+          </a>
+          <a class="active" href="/configuracoes.html">
+            <span class="material-symbols-rounded side-icon" aria-hidden="true">settings</span>
+            <span>Configurações</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main class="settings-main">
+        <header class="settings-heading">
+          <span class="material-symbols-rounded" aria-hidden="true">settings</span>
+          <div>
+            <h1>Configurações</h1>
+            <p>Ajuste preferências simples da plataforma.</p>
+          </div>
+        </header>
+
+        <form class="profile-form settings-form">
+          <section class="settings-card simple-settings">
+            <label>
+              Idioma
+              <select>
+                <option>Português (Brasil)</option>
+                <option>English</option>
+                <option>Español</option>
+              </select>
+            </label>
+
+            <label>
+              Aparência
+              <select>
+                <option>Claro</option>
+                <option>Escuro</option>
+                <option>Usar padrão do sistema</option>
+              </select>
+            </label>
+
+            <label>
+              Tamanho do texto
+              <select>
+                <option>Médio</option>
+                <option>Pequeno</option>
+                <option>Grande</option>
+              </select>
+            </label>
+          </section>
+
+          <button class="button primary settings-save" type="submit">Salvar configurações</button>
+        </form>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
