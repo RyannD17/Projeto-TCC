@@ -3,7 +3,7 @@ const toast = document.querySelector("#toast");
 const internalSidebar = document.querySelector(".unified-sidebar");
 
 if (internalSidebar) {
-  if (!document.querySelector('link[href="/static/css/shell.css"]')) {
+  if (!document.querySelector('link[href="/Projeto-TCC/pages/static/css/shell.css"]')) {
     const shellStyles = document.createElement("link");
     shellStyles.rel = "stylesheet";
     shellStyles.href = "/static/css/shell.css";
@@ -14,11 +14,11 @@ if (internalSidebar) {
   navbar.className = "app-navbar";
   navbar.innerHTML = `
     <div class="app-navbar-inner">
-      <a class="app-brand" href="/tela-inicial.html" aria-label="Conexão Redação - início">
+      <a class="app-brand" href="/Projeto-TCC/pages/tela-inicial.html" aria-label="Conexão Redação - início">
         <span class="app-brand-mark"><span class="material-symbols-rounded" aria-hidden="true">ink_pen</span></span>
         <span>Conexão Redação</span>
       </a>
-      <a class="app-profile-link" href="/perfil.html" aria-label="Acessar meu perfil">
+      <a class="app-profile-link" href="/Projeto-TCC/pages/perfil.html" aria-label="Acessar meu perfil">
         <img class="app-profile-photo" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=96&h=96&q=80" alt="" />
         <span class="app-profile-copy"><strong>Mariana Souza</strong><small>Ver meu perfil</small></span>
       </a>
